@@ -1,0 +1,6 @@
+PBL.pem
+*.pem
+ansible.cfg
+get-pip.py
+.PBL.pem.*
+/home/ec2-user/ansible-deploy-pbl-19/PBL.pem

@@ -1,4 +1,4 @@
-region = "us-east-2"
+region = "us-east-1"
 
 vpc_cidr = "172.16.0.0/16"
 
@@ -20,7 +20,7 @@ ami-sonar = "ami-061da076c0bf9f5ba"
 
 ami-web = "ami-0bfc24c427814a85b"
 
-keypair = "IAC"
+keypair = "DevKey"
 
 account_no = "648544004274"
 

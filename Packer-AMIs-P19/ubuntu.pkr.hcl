@@ -1,6 +1,6 @@
 variable "region" {
   type    = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
@@ -15,7 +15,7 @@ source "amazon-ebs" "terraform-ubuntu-prj-19" {
   region        = var.region
   source_ami_filter {
     filters = {
-      name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
+      name                = "ubuntu-pro-server/images/hvm-ssd/ubuntu-xenial-16.04-amd64-pro-server-20221202"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }

@@ -25,7 +25,7 @@ variable "preferred_number_of_private_subnet" {
 
 variable "private_subnet" {
   type        = list(any)
-  description = "List of private subnet"
+  description = "list of private subnet"
 }
 
 variable "public_subnet" {

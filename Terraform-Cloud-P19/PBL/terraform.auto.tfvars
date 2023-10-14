@@ -12,13 +12,13 @@ preferred_number_of_private_subnet = 4
 
 ami = "ami-0149b2da6ceec4bb0"
 
-ami-bastion = "ami-037e401ce6c751446"
+ami-bastion = "ami-09f2ca3030fbea67a"
 
-ami-nginx = "ami-04cc008450224bc8d"
+ami-nginx = "ami-08afa1d66ef286f9f"
 
-ami-sonar = "ami-061da076c0bf9f5ba"
+ami-sonar = "ami-0e64aeb60976de56b"
 
-ami-web = "ami-0bfc24c427814a85b"
+ami-web = "ami-0ad59f057a9823709"
 
 keypair = "DevKey"
 

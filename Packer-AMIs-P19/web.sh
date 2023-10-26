@@ -32,10 +32,10 @@ source ~/.bash_profile
 #installing self signed certificate for apache
 sudo yum install -y mod_ssl
 
-sudo openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/DevKey.key -x509 -days 365 -out /etc/pki/tls/certs/lego.crt \
+sudo openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/lego.key -x509 -days 365 -out /etc/pki/tls/certs/lego.crt \
 -subj "/C=UK/ST=London/L=London/O=darey.io/OU=devops/CN=$(curl -s http://169.254.169.254/latest/meta-data/local-hostname)"
 
 
 sudo sed -i 's/localhost.crt/lego.crt/g'  /etc/httpd/conf.d/ssl.conf
 
-sudo sed -i 's/localhost.key/DevKey.key/g'  /etc/httpd/conf.d/ssl.conf
+sudo sed -i 's/localhost.key/lego.key/g'  /etc/httpd/conf.d/ssl.conf

@@ -1,5 +1,0 @@
----
-- hosts: tag_Name_ACS_tooling 
-  become: true
-  roles:
-     - tooling

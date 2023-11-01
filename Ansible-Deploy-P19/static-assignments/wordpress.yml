@@ -1,0 +1,5 @@
+---
+- hosts: tag_Name_Wordpress
+  become: true
+  roles:
+     - wordpress

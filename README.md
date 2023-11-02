@@ -63,4 +63,35 @@ AUTOMATE INFRASTRUCTURE WITH IAC USING TERRAFORM. PART 4 – TERRAFORM CLOUD
 
 <img width="957" alt="Web AMI" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/e35502a5-151c-4721-a45a-f7127db21e5b">
 
+- Console AMIs confirmed.
+  
+<img width="957" alt="Console AMIs confirmed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/d53ca2f4-9d38-4ce9-bc30-17868b5a91d0">
 
+
+## STEP 2
+
+- **Terraform cloud configuration**
+
+- Terraform Cloud This is a managed service provided by HashiCorp for using Terraform to provision and manage infrastructure in a collaborative and efficient way. Terraform Cloud provides you with Terraform CLI to provision infrastructure, either on demand or in response to various events. If you have a team who works with Terraform, you need a consistent remote environment with remote workflow and shared state to run Terraform commands. In summary, Terraform Cloud simplifies the management of infrastructure as code (IaC) and is especially useful for teams working on infrastructure projects collaboratively. It ensures consistency, security, and efficiency in managing infrastructure using Terraform.
+
+- **What's next?**
+
+- Migrate the .tf code to `terraform cloud` to manage the AWS infrastructure from there.
+
+   1 - Create a Terraform Cloud account
+Follow this [link](https://app.terraform.io/public/signup/account), create a new account, verify your email
+
+   2 - Create an organization
+Select “Start from scratch”, choose a name for your organization and create it.
+
+- Configure a workspace
+
+- We will use version control workflow as the most common and recommended way to run Terraform commands triggered from our git repository.
+
+- Make sure to clone down or fork this terraform [repository](https://github.com/eyolegoo/Terraform-Cloud-P19) to your work station and edit accordingly to meet your new changes.
+
+- Create a new repository in your GitHub account you can give it any name, push the terraform codes to the repository. **NOTE**; Remember to copy the AMI id created with packer for the bastion, nginx, ubuntu, and webservers to the terraform.auto.tfvars file and edit accordingly.
+
+- Go back to your terraform account, Choose version control workflow and you will be prompted to connect your GitHub account to your workspace – follow the prompt and add your newly created repository (terraform-cloud) to the workspace.
+
+- Move on to “Configure settings”, provide a description for your workspace and leave all the rest settings to default, click “Create workspace”

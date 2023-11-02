@@ -84,7 +84,7 @@ Follow this [link](https://app.terraform.io/public/signup/account), create a new
    2 - Create an organization
 Select “Start from scratch”, choose a name for your organization and create it.
 
-- Configure a workspace
+   3 - Configure a workspace
 
 - We will use version control workflow as the most common and recommended way to run Terraform commands triggered from our git repository.
 
@@ -95,3 +95,13 @@ Select “Start from scratch”, choose a name for your organization and create 
 - Go back to your terraform account, Choose version control workflow and you will be prompted to connect your GitHub account to your workspace – follow the prompt and add your newly created repository (terraform-cloud) to the workspace.
 
 - Move on to “Configure settings”, provide a description for your workspace and leave all the rest settings to default, click “Create workspace”
+
+  4 - Terraform Cloud supports two types of variables: environment variables and Terraform variables. Either type can be marked as sensitive, which prevents them from being displayed in the Terraform Cloud web UI and makes them write-only.
+
+- Set two environment variables: `AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY`, set the values used in Project 16. These credentials will be used to provision your AWS infrastructure by Terraform Cloud.
+
+- After you have set these 2 environment variables – your Terraform Cloud is all set to apply the codes from GitHub and create all necessary AWS resources.
+
+  5 - Run `terraform plan` and `terraform apply` from web console.
+
+- Before we push our codes to github, comment out the `listeners and attachment group` for now, reason being that we do not want our Load balancer to forward traffic to the listeners yet, because we still have some configurations we need to put in place, else we will keep getting unhealthy instances.

@@ -39,10 +39,28 @@ AUTOMATE INFRASTRUCTURE WITH IAC USING TERRAFORM. PART 4 – TERRAFORM CLOUD
 
 ## STEP 1
 
-- Clone down this [Packer-AMIs-P19 repository]() to your local machine and cd AMI-p19.
+- Clone down this [Packer-AMIs-P19 repository](https://github.com/eyolegoo/Packer-AMIs-P19) to your local machine and `cd Packer-AMIs-P19`.
 
-- Before running the packer build command, make sure to configure the AWS CLI on your local machine. Packer relies on the AWS CLI for authentication and access to AWS resources. Running the aws configure command will prompt you to enter your AWS Access Key ID and AWS Secret Access Key.. It provides the neccessary permissions to interact with AWS resources.
+- Before running the `Packer build` command, make sure to configure the AWS CLI on your local machine. Packer relies on the AWS CLI for authentication and access to AWS resources. Running the `aws configure` command will prompt you to enter your ***AWS Access Key ID*** and ***AWS Secret Access Key***.. It provides the neccessary permissions to interact with AWS resources.
 
-Go ahead to build the images
+- Go ahead to build the images
 
-Run
+- For each of the following `.pkr.hcl files`, we run the following commands
+
+- `packer fmt bastion.pkr.hcl`
+- `packer validate bastion.pkr.hcl`
+- `packer build bastion.pkr.hcl`
+
+- Do same for other AMIs(**Nginx, Ubuntu and web**)
+
+- Expected output...
+
+<img width="732" alt="Bastion AMI" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/3645e27e-b9af-4669-bd34-d548d9250c29">
+
+<img width="730" alt="NGINX AMI" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/7df281dc-1e90-4f94-9bb0-8bd55ac3ca09">
+
+<img width="931" alt="Ubuntu AMI" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/0edfbf84-0ed3-4929-873f-9e16e761672f">
+
+<img width="957" alt="Web AMI" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/e35502a5-151c-4721-a45a-f7127db21e5b">
+
+

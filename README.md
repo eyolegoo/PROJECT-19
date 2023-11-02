@@ -105,3 +105,19 @@ Select “Start from scratch”, choose a name for your organization and create 
   5 - Run `terraform plan` and `terraform apply` from web console.
 
 - Before we push our codes to github, comment out the `listeners and attachment group` for now, reason being that we do not want our Load balancer to forward traffic to the listeners yet, because we still have some configurations we need to put in place, else we will keep getting unhealthy instances.
+
+<img width="588" alt="uncomment1" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/78361b79-2274-4c0a-a220-9c32e769e6ea">
+
+<img width="746" alt="uncomment2" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/29198303-9ff2-4015-a835-389b35774db1">
+
+<img width="652" alt="uncomment3" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/76fbc95f-274c-4df5-83eb-feed5f6b8afd">
+
+<img width="789" alt="uncomment4" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/16feb47c-1638-427a-a9f8-f55be65f2daf">
+
+
+- Now Push your changes to github since we have an integration with GitHub, the process will be triggered automatically. Plan must be launched automatically, but to apply you still need to approve manually. NOTE; Even though you can configure “Auto apply”, it is always a good idea to verify your plan results before pushing it to apply to avoid any misconfigurations that can cause ‘bill shock’
+
+- **Output**
+
+<img width="747" alt="terraform cloud run" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/f210797a-bd42-4676-9a70-da3e59f46944">
+

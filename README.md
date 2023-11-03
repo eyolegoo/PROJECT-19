@@ -139,3 +139,22 @@ Select “Start from scratch”, choose a name for your organization and create 
 <img width="786" alt="Target Before" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/abc078cf-9ad0-42be-a7c0-ac0b3978e2d3">
 
 
+## STEP 4
+
+- **ANSIBLE configuration**
+
+- Before we proceed with the Ansible section of this project, i would like to explain the concept of Dynamic inventory plugin
+
+   - Ansible Dynamic Inventory Plugin: When using Ansible with AWS or other cloud platforms, inventory file maintenance will be a hectic task as AWS frequently changes IPs, autoscaling instances, and more. Once your AWS EC2 hosts are spun up, you’ll probably want to talk to them again. With a cloud setup, it’s best not to maintain a static list of cloud hostnames in text files. Rather, the best way to handle this is to use the aws_ec2 dynamic inventory plugin.
+  
+- This is how it works here; The aws_ec2 dynamic inventory plugin makes API calls to AWS to get a list of inventory hosts from Amazon Web Services EC2 in the run time. It gives the EC2 instance details dynamically to manage the AWS infrastructure.
+
+- Our infrastucture configuration management will happen from our bastion server, since we have configured our firewall/security-group to allow `ssh access` from the bastion host.
+
+- I `ssh into the bastion` with the below setup. This will serve as a jumpbox(access) to the other servers.
+
+
+<img width="477" alt="ssh bastion" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/41ec3ef0-3f80-48f8-a3b4-eef36074bf59">
+
+
+- After a successful `ssh into the bastion` I cloned the Ansible-Deploy-P19 repo to the bastion server. **Take note**; I edited the `EFS access point and the RDS endpoint` for the **tooling and wordpress**. Open the **roles//tasks/main.yml and setup-db.yml** and edit accordingly.

@@ -121,3 +121,18 @@ Select “Start from scratch”, choose a name for your organization and create 
 
 <img width="747" alt="terraform cloud run" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/f210797a-bd42-4676-9a70-da3e59f46944">
 
+- Because of ***LINE 107***, the output to some resource look thus:
+
+<img width="822" alt="BEFORE 1" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/da7725ab-be3b-4132-adb9-5fe7bf12602c">
+
+<img width="825" alt="BEFORE 2" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/62cd7995-fad0-4d9d-9f73-ffc2341719e3">
+
+<img width="799" alt="Nginx HC before" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/c08965b5-9e3b-402d-8978-668e05b1ff48">
+
+<img width="800" alt="Tooling HC before" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/f0dee0d6-e778-4401-81fb-b462d0242559">
+
+<img width="801" alt="Wordpress HC before" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/d8ebdb10-99a0-4579-9f14-84f352c8792d">
+
+<img width="786" alt="Target Before" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/abc078cf-9ad0-42be-a7c0-ac0b3978e2d3">
+
+

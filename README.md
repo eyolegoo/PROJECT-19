@@ -160,8 +160,11 @@ Select “Start from scratch”, choose a name for your organization and create 
 <img width="477" alt="ssh bastion" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/41ec3ef0-3f80-48f8-a3b4-eef36074bf59">
 
 
+- After a successful `ssh into the bastion`, I ran the `aws configure` command. This allows you to provide your AWS access key and secret access key as usual, which are used to authenticate your Ansible playbook with AWS services. This is crucial because AWS resources, such as EC2 instances, S3 buckets, and RDS databases, require proper authentication to interact with them. And since we are making use of AWS dynamic inventory plugin in Ansible configaration, it relies on the AWS CLI configuration to discover and list AWS resources. By configuring the AWS CLI on the bastion host, we ensure that the dynamic inventory plugin can authenticate with AWS and query AWS resources correctly.
 
-- After a successful `ssh into the bastion` I cloned the Ansible-Deploy-P19 repo to the bastion server. **Take note**; I edited the `EFS access point and the RDS endpoint` for the **tooling and wordpress**. Open the **roles//tasks/main.yml and setup-db.yml** and edit accordingly.
+- I cloned the Ansible-Deploy-P19 repo to the bastion server. The cloned repo becomes our ***PWD***
+
+- **Take note**; I edited the `EFS access point and the RDS endpoint` for the **tooling and wordpress**. Open the **roles//tasks/main.yml and setup-db.yml** and edit accordingly.
 
 - **Note**, Ansible has modules and plugins that allow it to interact with AWS services. These modules rely on Python libraries like `botocore and boto3` to communicate with AWS APIs. Without this, Ansible cannot establish connections to AWS services, making AWS integration impossible. To confirm this, let's change directory into the ansible repo `Ansible-Deploy-P19` and run our Ansible-playbook command as usual, we will encounter error.
 
@@ -186,3 +189,17 @@ sudo yum purge ansible
 - Then reinstall ansible using `sudo python3 -m pip install --user ansible` Confirm using `ansible --version | grep "python version"`
 
 - Now install boto3 using `python -m pip install boto3`
+
+- Now we can run our ansible-playbook using `ansible-playbook -i inventory/aws_ec2.yml playbooks/sites.yml`
+
+
+<img width="781" alt="ANSIBLE NGINX" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/d5206555-e080-40b4-9622-3c3020c760e4">
+
+<img width="816" alt="ANSIBLE TOOLING" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/2015cc13-933e-4aa3-aa52-af69cb8e2fd6">
+
+<img width="816" alt="ANSIBLE WORDPRESS" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/a2e936be-f817-477f-a5d9-26fe04408697">
+
+
+- Time to check if configuration with ansible works
+
+- `ssh nginx`. Check if the server is and roading

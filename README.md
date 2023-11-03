@@ -123,7 +123,9 @@ Select “Start from scratch”, choose a name for your organization and create 
 <img width="747" alt="terraform cloud run" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/f210797a-bd42-4676-9a70-da3e59f46944">
 
 
+
 - Because of the comment out on ***Listeners and attachment group***, the output to some resource look thus:
+
 
 
 <img width="822" alt="BEFORE 1" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/da7725ab-be3b-4132-adb9-5fe7bf12602c">
@@ -154,7 +156,9 @@ Select “Start from scratch”, choose a name for your organization and create 
 - I `ssh into the bastion` with the below setup. This will serve as a jumpbox(access) to the other servers.
 
 
+
 <img width="477" alt="ssh bastion" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/41ec3ef0-3f80-48f8-a3b4-eef36074bf59">
+
 
 
 - After a successful `ssh into the bastion` I cloned the Ansible-Deploy-P19 repo to the bastion server. **Take note**; I edited the `EFS access point and the RDS endpoint` for the **tooling and wordpress**. Open the **roles//tasks/main.yml and setup-db.yml** and edit accordingly.

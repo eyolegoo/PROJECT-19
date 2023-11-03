@@ -162,3 +162,27 @@ Select “Start from scratch”, choose a name for your organization and create 
 
 
 - After a successful `ssh into the bastion` I cloned the Ansible-Deploy-P19 repo to the bastion server. **Take note**; I edited the `EFS access point and the RDS endpoint` for the **tooling and wordpress**. Open the **roles//tasks/main.yml and setup-db.yml** and edit accordingly.
+
+- **Note**, Ansible has modules and plugins that allow it to interact with AWS services. These modules rely on Python libraries like `botocore and boto3` to communicate with AWS APIs. Without this, Ansible cannot establish connections to AWS services, making AWS integration impossible. To confirm this, let's change directory into the ansible repo `Ansible-Deploy-P19` and run our Ansible-playbook command as usual, we will encounter error.
+
+
+<img width="694" alt="Ansible error" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/1822526d-a2cd-498b-90ea-a1fa51845a8d">
+
+
+- Run the below command to solve this error
+
+```
+sudo yum install python3.8
+sudo alternatives --config python3
+```
+
+- Then uninstall the ansible
+
+```
+sudo yum remove ansible
+sudo yum purge ansible
+```
+
+- Then reinstall ansible using `sudo python3 -m pip install --user ansible` Confirm using `ansible --version | grep "python version"`
+
+- Now install boto3 using `python -m pip install boto3`

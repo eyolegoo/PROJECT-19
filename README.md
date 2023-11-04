@@ -203,3 +203,22 @@ sudo yum purge ansible
 - Time to check if configuration with ansible works
 
 - `ssh nginx`. Check if the server is and roading
+
+
+<img width="678" alt="nginx is installed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/93e732d3-1d19-4029-b070-81e125554f91">
+
+
+`curl localhost`
+<img width="789" alt="NGINX WELL CONFIGURED" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/84a9e594-18d4-4496-a4b6-932aef079489">
+
+
+- `ssh tooling`. Check if the server is and roading
+
+
+<img width="725" alt="Tooling well mounted, installed and running" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/cdf76abb-2c26-4634-86e4-8ffc64dee4fb">
+
+<img width="781" alt="tooling webserver running" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/89d861d1-0a5b-4039-836e-572976147ea6">
+
+
+
+

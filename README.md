@@ -202,22 +202,44 @@ sudo yum purge ansible
 
 - Time to check if configuration with ansible works
 
-- `ssh nginx`. Check if the server is and roading
+- `ssh nginx`. Check if the server is up and running using `sudo systemctl status nginx`
 
 
 <img width="678" alt="nginx is installed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/93e732d3-1d19-4029-b070-81e125554f91">
 
 
 `curl localhost`
+
 <img width="789" alt="NGINX WELL CONFIGURED" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/84a9e594-18d4-4496-a4b6-932aef079489">
 
 
-- `ssh tooling`. Check if the server is and roading
+- `ssh tooling`. Check if the server is up and running using `sudo systemctl status httpd`
 
 
 <img width="725" alt="Tooling well mounted, installed and running" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/cdf76abb-2c26-4634-86e4-8ffc64dee4fb">
 
+
+`curl localhost`
+
 <img width="781" alt="tooling webserver running" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/89d861d1-0a5b-4039-836e-572976147ea6">
+
+
+- `ssh wordpress`. Check if the server is up and running using `sudo systemctl status httpd`
+
+
+<img width="666" alt="Wordpress mounted,installed and running" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/b6285e8f-4403-4839-811f-650909aee7d0">
+
+
+`curl localhost`
+
+<img width="663" alt="wordpress webserver error" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/8d3467bf-16d9-498d-a51a-cb00703ffbb7">
+
+<img width="677" alt="inside wp-config php file" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/dd336d46-4f5f-44f6-8f13-45e79118e9a5">
+
+
+- **Issue resolved**
+  
+<img width="418" alt="wordpress webserver fixed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/5302407b-95d4-4fde-9daa-dd7977c340c0">
 
 
 

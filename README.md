@@ -242,5 +242,39 @@ sudo yum purge ansible
 <img width="418" alt="wordpress webserver fixed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/5302407b-95d4-4fde-9daa-dd7977c340c0">
 
 
+- Now, we are sure our proxy server will be able to successfully route traffic to the wordpress and tooling servers, since we can confirm that they are healthy.
+
+- Next step is to go back to the terraform infrastructure and **uncomment the listeners and attachment group** we commented out, then push the code back to github, so our terraform-cloud can run `plan` and `apply`.
+
+<img width="697" alt="running the uncommented" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/734ed2ce-ee92-4bd6-b2f7-a2f7c7605423">
+
+- Back to our AWS Console to confirm the last operation.
+
+<img width="930" alt="NGINX LISTENERS ADD TO EXT-ALB" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/ab7671ba-2d53-4fce-ab09-3623a7b9dbad">
+
+<img width="779" alt="nginx healthy" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/387267f1-e3d0-47f3-b521-0bcd92c3b44c">
+
+<img width="925" alt="WORDPRESS ADDED TO INT-ALB" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/fae25f89-5cd0-4c03-ae41-684b884fc1d5">
+
+<img width="777" alt="wordpress healthy" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/c814db14-ff96-42e6-81e5-b9a13307293c">
+
+<img width="782" alt="tooling healthy" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/cd8b83f5-a50a-4976-86a2-64ebd2996a60">
+
+
+
+- It has been confirmed that all of our target group instances are healthy, and ready to receive traffic.
+
+- Let's access our applications from the browser through the domain name.
+
+
+<img width="660" alt="tooling site" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/e86c4b6c-945b-4aa1-99fe-01c78da6e3f1">
+
+<img width="327" alt="wordpress site" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/9c097c2b-0d99-492e-91bb-22901e65a1bb">
+
+
+- In order to save cost, I destroy the resources as we come to the end of this project.
+
+<img width="619" alt="resources destroyed" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/65a84860-5b34-4067-819c-6099259c1987">
+
 
 

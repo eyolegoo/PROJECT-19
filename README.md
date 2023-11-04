@@ -266,9 +266,13 @@ sudo yum purge ansible
 
 - Let's access our applications from the browser through the domain name.
 
+- **For tooling**
 
 <img width="660" alt="tooling site" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/e86c4b6c-945b-4aa1-99fe-01c78da6e3f1">
 
+
+- **For wordpress**
+ 
 <img width="327" alt="wordpress site" src="https://github.com/eyolegoo/PROJECT-19/assets/115954100/9c097c2b-0d99-492e-91bb-22901e65a1bb">
 
 
